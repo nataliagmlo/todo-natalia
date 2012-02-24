@@ -1,0 +1,15 @@
+<h1>Tareas</h1>
+
+<%= render :partial => "listing", :locals => {:tasks => @tasks} %>
+
+<!--<ul>
+	<%# Task.all.each do |task| %>
+	<%# highlighted_task.each do |task| %>
+	<% @tasks.each do |task| %>
+		<li>
+			<%= link_to task.title, task_path(task) %>: 
+			<%= task.percentage %>%
+			<%= (link_to task.user.name, user_path(task.user)) unless task.user.nil? %>
+		</li>
+	<% end %>
+</ul>-->
